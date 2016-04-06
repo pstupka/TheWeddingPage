@@ -406,24 +406,38 @@
 <!-- Add Google Maps -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
-    var myCenter = new google.maps.LatLng(52.2315829, 21.0008874);
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var labelIndex = 0;
+    var myWedding = new google.maps.LatLng(52.2466141,21.0125508);
+
+    var locations = [
+        ['Kościół św. Anny w Warszawie',52.2466141,21.0125508],
+        ['Venecia Palace',52.153408,20.8893504]
+    ];
 
     function initialize() {
         var mapProp = {
-        center:myCenter,
-        zoom:12,
-        scrollwheel:false,
-        draggable:true,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-    };
+            center:myWedding,
+            zoom:10,
+            scrollwheel:false,
+            draggable:true,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
 
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-    var marker = new google.maps.Marker({
-        position:myCenter,
-    });
+        for (var i = 0; i < locations.length; i++){
+            var location = locations[i];
+            var marker = new google.maps.Marker({
+                position: {lat: location[1], lng: location[2]},
+                map: map,
+                //icon: image,
+                //shape: shape,
+                label: labels[labelIndex++ % labels.length],
+                title: location[0]
+            });
+        }
 
-    marker.setMap(map);
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
