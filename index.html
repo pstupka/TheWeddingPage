@@ -27,14 +27,13 @@
         padding: 80px 120px;
     }
     .person {
-        border: 10px solid transparent;
+        border: 5px solid ;
+        border-color: #f1f1f1;
         margin-bottom: 25px;
-        width: 255;
-        height: 255;
         opacity: 0.85;
     }
     .person:hover {
-        border-color: #f1f1f1;
+        border-color: #e1e1e1;
     }
 
     .carousel-inner img {
@@ -189,6 +188,7 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -200,18 +200,25 @@
                  <p>"Oi!"</p>
             </div>
         </div>
-		<div class="item">
+	      <div class="item">
             <img src="assets/carousel_wedding_old.jpg" alt="02" width="1200" height="700">
             <div class="carousel-caption">
                 <h3>Łuków, Polska</h3>
                 <p>"Fabulous"</p>
             </div>
         </div>
-		<div class="item">
+        <div class="item">
             <img src="assets/carousel_eiffel.jpg" alt="03" width="1200" height="700">
             <div class="carousel-caption">
                 <h3>Paryż, Francja</h3>
                 <p>"Viva la France!!"</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="assets/carousel_podzamcze.jpg" alt="04" width="1200" height="700">
+            <div class="carousel-caption">
+                <h3>Warszawa, Polska</h3>
+                <p>"We're getting married!"</p>
             </div>
         </div>
     </div>
@@ -245,7 +252,7 @@
     </div>
     <div class="col-sm-4">
       <a href="#ring">
-        <img src="assets/ring.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="assets/ring.jpg" class="img-circle" alt="Random Name" width="255" height="255">
       </a>
       <h2><strong>Zostało<br><div id="countdown"></div></strong></h2>
     </div>
@@ -364,6 +371,14 @@
           <p><strong>Oprawa fotograficzna</strong></p>
           <p>Fotografia Mirosław Koczkodaj</p>
           <a href="http://koczkodaj.com" class="btn btn-link">Szczegóły</a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="thumbnail">
+          <img src="assets/creep.png" alt="M.Koczkodaj" width="300" height="200">
+          <p><strong>Oprawa muzyczna</strong></p>
+          <p>Zespół Knockout</p>
+          <a href="http://knockout.art.pl" class="btn btn-link">Szczegóły</a>
         </div>
       </div>
     </div>
